@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .slider {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .slides {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+        }
+
+        .slide.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .controls {
+            margin-top: 20px;
+            display: flex;
+        }
+
+        .button-wrapper {
+            margin: 5px;
+            border: 2px solid transparent;
+        }
+
+        .button-wrapper.active {
+            border-color: #007BFF;
+        }
+
+        .slide-btn {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+        }
+
+        .slide-btn:focus {
+            outline: none;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active" id="slide1">
+                <video id="video1" src="https://videos.pexels.com/video-files/18951310/18951310-sd_640_360_30fps.mp4"
+                    controls muted autoplay></video>
+            </div>
+            <div class="slide " id="slide2">
+                <video id="video2" src="https://videos.pexels.com/video-files/20801280/20801280-sd_640_360_30fps.mp4"
+                    controls muted autoplay></video>
+            </div>
+            <div class="slide" id="slide3">
+                <video id="video3" src="https://videos.pexels.com/video-files/19562605/19562605-sd_640_360_25fps.mp4"
+                    controls muted autoplay></video>
+            </div>
+            <div class="slide" id="slide4">
+                <video id="video4" src="https://videos.pexels.com/video-files/20712217/20712217-sd_640_360_30fps.mp4"
+                    controls muted autoplay></video>
+            </div>
+            <div class="slide" id="slide5">
+                <video id="video4" src="https://videos.pexels.com/video-files/20712217/20712217-sd_640_360_30fps.mp4"
+                    controls muted autoplay></video>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <div class="button-wrapper">
+            <button class="slide-btn" data-index="0">1</button>
+        </div>
+        <div class="button-wrapper">
+            <button class="slide-btn" data-index="1">2</button>
+        </div>
+        <div class="button-wrapper">
+            <button class="slide-btn" data-index="2">3</button>
+        </div>
+        <div class="button-wrapper">
+            <button class="slide-btn" data-index="3">4</button>
+        </div>
+        <div class="button-wrapper">
+            <button class="slide-btn" data-index="4">5</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const buttonWrappers = document.querySelectorAll('.button-wrapper');
+        const videos = document.querySelectorAll('video');
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            buttonWrappers[currentSlide].classList.remove('active');
+            currentSlide = index;
+            slides[currentSlide].classList.add('active');
+            buttonWrappers[currentSlide].classList.add('active');
+
+            // Pause all videos
+            videos.forEach(video => {
+                video.pause();
+            });
+
+            // Play the video of the current slide
+            const currentVideo = slides[currentSlide].querySelector('video');
+            currentVideo.currentTime = 0;
+            currentVideo.play();
+        }
+
+        function nextSlide() {
+            showSlide((currentSlide + 1) % slides.length);
+        }
+
+        buttonWrappers.forEach((buttonWrapper, index) => {
+            buttonWrapper.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+
+        // Start the first video
+        showSlide(0);
+
+        // Listen for ended event on each video
+        videos.forEach((video, index) => {
+            video.addEventListener('ended', () => {
+                nextSlide();
+            });
+        });
+
+    </script>
+</body>
+
+</html>
