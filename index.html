@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moviestan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>
+                M<span class="lg_sml">OVIESTAN</span>
+            </h1>
+        </div>
+        <nav class="navigation_bar">
+            <ul class="menus">
+                <li class="sidbar_btn">
+                    <a href="#" id="opn_cls_sidebar">
+                        <i id="opn_cls_icn_bar" class="fa-solid fa-chevron-down"></i>                     
+                    </a>
+                </li>
+                <select name="" id="movieSelect" class="select select_pictures active_manu" onchange="showDivs()">
+                    <option value="all"># All</option>
+                    <option value="hollywood"><a href="#" target="_parent"># Hollywood</a></option>
+                    <option value="bollywood"># Bollywood</option>
+                    <option value="tollywood"># Tollywood</option>
+                </select>
+                <li class="menu"><a href="#">Hollywood</a></li>
+                <li class="menu"><a href="#">Bollywood</a></li>
+                <li class="menu"><a href="#">Tollywood</a></li>
+                <li class="menu"><a href="#">Web Series</a></li>
+                <li class="menu"><a href="#">Anime's</a></li>
+                <li class="menu"><a href="#">Cartoon's</a></li>
+                <li class="menu"><a href="#">About us</a></li>
+                <li class="menu"><a href="#">Youtub</a></li>
+            </ul>
+        </nav>
+        
+        <div class="togglemenu">
+            <a href="explore.html" class="search_btn" id="search_btn_toggel">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <div class="user_profile">
+                <a href="#" class="user_dp" id="user_dp">
+                    <span class="icon">
+                        <i class="fa-regular fa-user"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="featured_sliders">
+        <div class="slide_container">
+            <div class="slide headslide_show" id="head_slide_1">
+                <div class="featured_background">
+                    <video preload="auto" class="featured_vid_mut1" autoplay muted>
+                        <source src="medias\featured videos\featured hollywood 2.mp4">
+                    </video>
+                </div>
+                <div class="featured_content">
+                    <h1>Fast and furious X</h1>
+                    <div class="info">
+                        <span>IMDB: 5.8/10</span>
+                        <span>Duration: 2h 21m</span>
+                        <span>Year: 2023</span>
+                    </div>
+                    <p>Fast X, the tenth film in the Fast and Furious Saga, launches the final chapters of one of
+                        cinema's most storied and popular global franchises, now in its third decade and still going
+                        strong with the same core cast and characters as when it began​.</p>
+                    <div class="buttons">
+                        <button class="watch">Watch movie</button>
+                        <button class="add">Download</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="head_slide_2">
+                <div class="featured_background">
+                    <video preload="auto" class="featured_vid_mut2" autoplay muted>
+                        <source src="medias\featured videos\feautured hindi movie.mp4">
+                    </video>
+                </div>
+                <div class="featured_content">
+                    <h1>K.G.F Chapter 2</h1>
+                    <div class="info">
+                        <span>IMDB: 8.3/10</span>
+                        <span>Duration: h 48m</span>
+                        <span>Year: 2022</span>
+                    </div>
+                    <p>The story continues from the events of the first film, with Rocky having established himself as
+                        the ruler of the Kolar Gold Fields (KGF). He faces new challenges and enemies, including the
+                        powerful Adheera (played by Sanjay Dutt) and the Indian Prime Minister Ramika Sen (played by
+                        Raveena Tandon). The movie explores Rocky's journey as he fights to retain his power and protect
+                        his empire.</p>
+                    <div class="buttons">
+                        <button class="watch">Watch Movie</button>
+                        <button class="add">Download</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="head_slide_3">
+                <div class="featured_background">
+                    <video preload="auto" class="featured_vid_mut3" autoplay muted>
+                        <source src="medias\featured videos\featured cartoon 1.mp4">
+                    </video>
+                </div>
+                <div class="featured_content">
+                    <h1>Cars</h1>
+                    <div class="info">
+                        <span>IMDB: 7.2/10</span>
+                        <span>Duration: 1h 56m</span>
+                        <span>Year: 2006</span>
+                    </div>
+                    <p>The movie follows Lightning McQueen, a rookie race car who gets stranded in a small town called
+                        Radiator Springs on his way to a major race. During his time in the town, he learns valuable
+                        lessons about friendship and humility.</p>
+                    <div class="buttons">
+                        <button class="watch">Watch Movie</button>
+                        <button class="add">Download</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="head_slide_4">
+                <div class="featured_background">
+                    <video preload="auto" class="featured_vid_mut4" autoplay muted>
+                        <source src="medias\featured videos\featured anime.mp4">
+                    </video>
+                </div>
+                <div class="featured_content">
+                    <h1>I Want to Eat Your Pancreas</h1>
+                    <div class="info">
+                        <span>IMDB: 8.0/10</span>
+                        <span>Duration: 1h 48m</span>
+                        <span>Year: 2018</span>
+                    </div>
+                    <p>"I Want to Eat Your Pancreas" is a Japanese animated coming-of-age drama that follows a high
+                        school student who discovers his classmate Sakura Yamauchi is suffering from a terminal illness.
+                        The story revolves around their developing friendship as she lives out her final moments.</p>
+                    <div class="buttons">
+                        <button class="watch">Watch Movie</button>
+                        <button class="add">Download</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="head_slide_5">
+                <div class="featured_background">
+                    <video preload="auto" class="featured_vid_mut5" autoplay muted>
+                        <source src="medias\featured videos\featured hollywood 1.mp4">
+                    </video>
+                </div>
+                <div class="featured_content">
+                    <h1>Godzilla x Kong</h1>
+                    <div class="info">
+                        <span>IMDB: 6.3/10.</span>
+                        <span>Duration: 1h 55m</span>
+                        <span>Year: 2024</span>
+                    </div>
+                    <p>"Godzilla x Kong: The New Empire" follows Godzilla and Kong as they team up to face a colossal
+                        new threat emerging from the Hollow Earth, which jeopardizes their existence and that of
+                        humanity. The film delves deeper into the origins of these titanic creatures and the mysteries
+                        surrounding Skull Island.</p>
+                    <div class="buttons">
+                        <button class="watch">Watch Movie</button>
+                        <button class="add">Download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <div class="featured_slide_picture_btn_container ">
+        <div class="slide_button slide_button_active">
+            <a href="#" class="" id="slidevid_1_btn">
+                <div class="img_container">
+                    <img src="https://th.bing.com/th?id=ODL.98348481f4c368deac316c85d95e3596&w=135&h=201&c=10&rs=1&qlt=90&o=6&pid=13.1"
+                        alt="">
+                </div>
+                <div class="picture_name">
+                    <span>
+                        fast and furious X
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="slide_button">
+            <a href="#" class="" id="slidevid_2_btn">
+                <div class="img_container">
+                    <img src="https://flxt.tmsimg.com/assets/p16345736_v_v9_ad.jpg" alt="">
+                </div>
+                <div class="picture_name">
+                    <span>
+                        K.G.F: Chapter 3
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="slide_button ">
+            <a href="#" class="" id="slidevid_3_btn">
+                <div class="img_container">
+                    <img src="https://xl.movieposterdb.com/09_08/2006/317219/xl_317219_fd0fc079.jpg" alt="">
+                </div>
+                <div class="picture_name">
+                    <span>
+                        Cars
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="slide_button">
+            <a href="#" class="" id="slidevid_4_btn">
+                <div class="img_container">
+                    <img src="https://th.bing.com/th?id=ODL.733b759364402f4de2b6b493031589c9&w=135&h=201&c=10&rs=1&qlt=90&o=6&pid=13.1"
+                        alt="">
+                </div>
+                <div class="picture_name">
+                    <span>
+                        i want to eat your pancreas
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="slide_button">
+            <a href="#" class="" id="slidevid_5_btn">
+                <div class="img_container">
+                    <img src="https://th.bing.com/th?id=ODL.cd7f36452ae0610105763616add64e71&w=135&h=201&c=10&rs=1&qlt=90&o=6&pid=13.1"
+                        alt="">
+                </div>
+                <div class="picture_name">
+                    <span>
+                        godzilla x kong: the new empire
+                    </span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <main class="main_body search_container_child">
+        <section class="top_pic_main_container_sections top_hollywood_section  hollywood_section">
+            <div class="title_hd">
+                <h2>Top related Hollywood </h2>
+                <a href="#" class="view_more">View More</a>
+            </div>
+
+            <div class="pic_main_cnt">
+
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://th.bing.com/th/id/OIP.rn6_0vYM2KhdmhHPKXEISwHaK-?w=766&h=1136&rs=1&pid=ImgDetMain"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Taken 3
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://www.bestmovieposters.co.uk/wp-content/uploads/2019/01/Dob-M54c-768x1138.jpeg"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Oblivion
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://m.media-amazon.com/images/M/MV5BY2MwMjZmNGYtYjY5Mi00NWFjLWFmYWMtMThiOTY0ZjYzMTk4XkEyXkFqcGdeQXVyNDc2NjEyMw@@._V1_FMjpg_UX1000_.jpg"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Vertical (2014)
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://m.media-amazon.com/images/M/MV5BZThhNzNiMzEtMzI5My00MmRiLWI5OWEtN2EzOTEwMTM2MmQ3XkEyXkFqcGdeQXVyNjQ0OTk1ODg@._V1_.jpg"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Howl (2015)
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://fr.web.img4.acsta.net/pictures/21/02/09/10/03/2732370.jpg" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Deep evil
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://th.bing.com/th?id=ODL.98348481f4c368deac316c85d95e3596&w=135&h=201&c=10&rs=1&qlt=90&o=6&pid=13.1"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Fast and furious
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://static.javatpoint.com/best/images/best-hollywood-movies-of-all-time1.png"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            The god father
+                        </p>
+                    </div>
+                </a>
+
+
+            </div>
+        </section>
+        <section class="top_pic_main_container_sections top_bollywood_section bollywood_section">
+            <div class="title_hd">
+                <h2>Top related Bollywood </h2>
+                <a href="#" class="view_more">View More</a>
+            </div>
+
+            <div class="pic_main_cnt">
+
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://www.scrolldroll.com/wp-content/uploads/2022/09/Khuda-Haafiz-Chapter-2-Best-Hindi-movies-of-2022-on-Zee5.jpg"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Khud haafiz
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://i.pinimg.com/736x/b9/74/53/b974538e486646270a5bafeaac15e722.jpg" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Dabangg 3
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://i.pinimg.com/originals/15/28/25/1528256fabaa4a3150d62aae56026325.jpg" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Baazaar
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://wp.popxo.com/wp-content/uploads/2022/01/MV5BNTlmNDMzOWQtYzg4Ny00OWQ0LWFhN2MtNmQ2MDczZGZhNTU5XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            War
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://www.successyeti.com/wp-content/uploads/2021/09/best-inspirational-movies-of-bollywood-based-on-desh-bhakti-8-743x1024.jpg"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Parmanu
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNWYwYmExOWQtYzNkOS00NWY5LWE4NTEtYTcwY2FiYmQ0OTg5XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Border (1997)
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/9f5dbcad1a4510c8a28bace74b4b11294d1973efe39e3818c6b982d9f9c64616._RI_V_TTW_.jpg"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            L.O.C kargil
+                        </p>
+                    </div>
+                </a>
+
+
+            </div>
+        </section>
+        <section class="top_pic_main_container_sections top_tollywood_section tollywood_section">
+            <div class="title_hd">
+                <h2>Top related Tollywood </h2>
+                <a href="#" class="view_more">View More</a>
+            </div>
+
+            <div class="pic_main_cnt">
+
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/71uDxcc9O+L._SX600_.jpg" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Parmam
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYmJhZmJlYTItZmZlNy00MGY0LTg0ZGMtNWFkYWU5NTA1YTNhXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UY1200_CR100,0,630,1200_AL_.jpg" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Drishyam
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://th.bing.com/th/id/OIP.aiqbPQzRMgVu0gnIwCqBLwHaJ4?rs=1&pid=ImgDetMain" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Baahubali part 1
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://wallpapercave.com/wp/wp1852114.jpg" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Baahubali part 2
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://th.bing.com/th/id/OIP.Er_eBJLEnEJl8CEXib8B4AHaJ3?w=800&h=1066&rs=1&pid=ImgDetMain"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Arjun reddy
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://www.themoviedb.org/t/p/original/jBk1mHtz4BfpHpro83QWmFyAiPt.jpg" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Enthiren
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://flxt.tmsimg.com/assets/p16345736_v_v9_ad.jpg"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            kgf
+                        </p>
+                    </div>
+                </a>
+
+
+            </div>
+        </section>
+        <section class="top_pic_main_container_sections top_cartoons_section cartoons_section">
+            <div class="title_hd">
+                <h2>Top related Cartoons </h2>
+                <a href="#" class="view_more">View More</a>
+            </div>
+
+            <div class="pic_main_cnt">
+
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://static.digit.in/OTT/v2/images/tr:w-1200/bablu-dablu-robo-rumble-56840.jpg"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Bablu Dablu
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://i.pinimg.com/originals/49/ed/bc/49edbc55f5deddd850d7c4ba97b1e379.jpg" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Doreman
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://th.bing.com/th/id/OIP.dy42kf7GDrTmblW-xpVf1QHaK9?rs=1&pid=ImgDetMain" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Wall-E
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://i.pinimg.com/originals/fb/e3/79/fbe3799a6a232fb92aab71a5af7a5f52.jpg" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Pakdam pakdai
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjI1NDFlMTYtYjQ0Yy00ZDc5LWE3OWYtMmEyYzJmYTA2ODU5XkEyXkFqcGdeQXVyNjExODE1MDc@._V1_.jpg"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Ninja hathori (1981)
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://th.bing.com/th/id/OIP.nYDFrHKUq4nugd4HOSBbKQAAAA?rs=1&pid=ImgDetMain" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Oggy and Cockroach
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://picfiles.alphacoders.com/159/159591.jpg" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Cars
+                        </p>
+                    </div>
+                </a>
+
+
+            </div>
+        </section>
+        <section class="top_pic_main_container_sections top_animes_section anime_section">
+            <div class="title_hd">
+                <h2>Top related Anime's </h2>
+                <a href="#" class="view_more">View More</a>
+            </div>
+
+            <div class="pic_main_cnt">
+
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://www.themoviedb.org/t/p/original/oTSwkGdeb8Mi5ED3irfxLQOfD6C.jpg" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            I want to eat your pancreas
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://wallpapercave.com/wp/wp6306492.jpg" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Attack on titan
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://i.pinimg.com/originals/47/2e/92/472e9277dae8a2750e32f493c0f08246.jpg" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Your name
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://th.bing.com/th/id/OIP.wbCntk6qJZr2G_Q61bsz3AHaQD?rs=1&pid=ImgDetMain" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Death not
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://i2.wp.com/tiffanyyong.com/wp-content/uploads/2017/03/A-Silent-Voice-Anime-Poster.jpg"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            A silent voice
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://picfiles.alphacoders.com/337/337775.jpg" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Weathering with You
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://w0.peakpx.com/wallpaper/767/827/HD-wallpaper-your-lie-in-april-cool-cute.jpg"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Your Lie in April
+                        </p>
+                    </div>
+                </a>
+
+
+            </div>
+        </section>
+        <section class="all_pic_main_container tollywood_section">
+            <div class="title_hd">
+                <h2>Tollywood</h2>
+                <a href="#" class="view_more">View More</a>
+            </div>
+            <div class="pic_main_cnt">
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/436/1630436-h-18323ab5427d"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Vikram
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/607/1718003610607-h"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Kalvan
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/3503/1713421653503-h"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Cadavar
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/9351/1711640599351-h"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Hanu-man
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/2974/1642974-h-fa19442aa1b6"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Mangalvaram
+                        </p>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+        <section class="animes_section all_pic_main_container ">
+            <div class="title_hd">
+                <h2>Anime's</h2>
+                <a href="#" class="view_more">View More</a>
+            </div>
+            <div class="pic_main_cnt">
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/6375/1446375-h-04491df333c0"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Tokyo Revenger
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/2658/1712922992658-h"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Bleach
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/1304/1551304-h-98266cbfb9b1"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Black Clover
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/8181/1098181-h-10ae0ad2dbc2"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            The faraway
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/1207/1641207-h-f0bb264f8256"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Ishura
+                        </p>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+        <section class="cartoons_section all_pic_main_container ">
+            <div class="title_hd">
+                <h2>Carrtoon's</h2>
+                <a href="#" class="view_more">View More</a>
+            </div>
+            <div class="pic_main_cnt">
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/9400/1715414139400-h"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Doraemon
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7737/1715415147737-h"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Shinchan
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7810/1297810-h-eaafe5c76231"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Marvel's Ultimate spiderman
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/4090/1254090-h-96b6e85c7859"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Return of hanuman
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/5551/675551-h"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Cars
+                        </p>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+        <section class="webseries_section all_pic_main_container">
+            <div class="title_hd">
+                <h2>WebSeries</h2>
+                <a href="#" class="view_more">View More</a>
+            </div>
+            <div class="pic_main_cnt">
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/3832/343832-h"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Criminal justic
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/2869/1102869-h-1196166e06e4"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Human promo
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/3674/1093674-h-09be23862d34"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Prampara
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/3649/1143649-h-64cd0888b7e3"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Rudra
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_x_div">
+                    <div class="img_cnt">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/5334/1105334-h-4cdfc30ac0bf"
+                            alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Meet suraj
+                        </p>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="rw">
+            <p>
+                es website pr movies upload hote rhte hain movies dekhne ke liye newlyunivers-x ko subscribe karein jo
+                aapko movie ka link provide karta hai yputub pr aur subscriber ko notification deta hai
+
+                apni mann pssand movie dekhne ya download karne ke liye movie ka naam Newlyunivers-X pr comment karein
+                jis bhi comented movie ko log sbse jada vote karenge use es website pr turant add kardiya jayega
+            </p>
+
+        </div>
+        <div class="cl">
+            <strong>About us</strong>
+            <span>
+                © 2024 Newlyunivers-X. All rights reserved.
+            </span>
+        </div>
+        <div class="cl">
+            <strong>All Movies</strong>
+            <a href="#">Hollywood</a>
+            <a href="#">Bollywood</a>
+            <a href="#">Tollywood</a>
+            <a href="#">Anime's</a>
+            <a href="#">Cartoon's</a>
+            <a href="#">Webs series</a>
+        </div>
+        <div class="cl">
+            <strong>Section</strong>
+            <a href="#">Top hollywood</a>
+            <a href="#">Recent</a>
+            <a href="#">Tollywood</a>
+            <a href="#">Anime's</a>
+            <a href="#">Cartoon's</a>
+            <a href="#">Webs series</a>
+        </div>
+        <div class="cl">
+            <strong>Section</strong>
+            <a href="#">Top hollywood</a>
+            <a href="#">Recent</a>
+            <a href="#">Tollywood</a>
+            <a href="#">Anime's</a>
+            <a href="#">Cartoon's</a>
+            <a href="#">Webs series</a>
+        </div>
+    </footer>
+    
+    <section class="login_popup " id="login_popupid">
+        <a href="#" class="cros_btn" id="close_button_login">
+            <i class="fa-regular fa-circle-xmark"></i>
+        </a>
+        <div class="login_page">
+            <div class="r_div">
+                <img src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/online_char_avengehonor_series_ironman_v1_lg_2.jpg"
+                    alt="" id="profile_photo">
+            </div>
+            <div class="l_div">
+                <video muted loop autoplay src="https://tse1.mm.bing.net/th?id=OMB.td66ff94oieheA&pid=15.1"
+                    class="bgv"></video>
+                <form action="" class="login_form" id="">
+                    <span class="user_name ">Username moviestan</span>
+                    <span class="user_email ">Moviesstanuser@gmail.com</span>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=prodot6555@gmail.com" target="_blank"
+                        class="contact_btn ">Contact with moviestan</a>
+
+                    <a href="#" id="login_button" class="login_btn ls_button login_active">
+                        Sign In with google
+                    </a>
+
+                    <a href="#" id="login_button" class="login_btn ls_button ">
+                        Sing Out
+                    </a>
+                    <span class="term_conditon">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At, rem?<a href="#" class="read_btn">
+                            Term and Conditon
+                        </a>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="fix_btm">
+
+    </div>
+    <a href="#" class="featured_vid_nut_btn button" title="Unmute" id="featured_vid_nut_btns">
+        <i class="featured_m_um_icon fa-solid fa-volume-xmark" id="featured_m_um_icon"></i>
+        <!-- <i class="fa-solid fa-volume-high"></i> -->
+    </a>
+    <script src="scripts.js"></script>
+    <script src="login.js"></script>
+    <script src="slide funtion.js"></script>
+    <script src="filter search.js"></script>
+    <script src="mediquery.js"></script>i
+</body>
+
+</html>
+<!-- 
+
+<div class="profile_page">
+                <div class="user_image">
+                    <img src="https://icon-library.com/images/generic-user-icon/generic-user-icon-9.jpg" alt="User">
+                </div>
+                <div class="user_name_and_email">
+                    <span>Usermoviestan </span>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=prodot6555@gmail.com" target="_blank" >Moviestan655@gmail.com</a>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://th.bing.com/th/id/OIP.lJhxIOdC55rp2v7ve4p2EgHaLH?rs=1&pid=ImgDetMain" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Tron
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://th.bing.com/th/id/OIP.IVD-VytAG-N8WM-GCkPTBQHaLG?rs=1&pid=ImgDetMain" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Ever time i die
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://www.discountdisplays.co.uk/our-blog/wp-content/uploads/p8815605_v_v8_ab.jpg" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Promotheous
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://i.pinimg.com/originals/40/c8/13/40c81324fb17f7e1d5287d702a8c883a.jpg" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Avenger
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://th.bing.com/th/id/OIP.pioOqBAS_8CnnTrY44tauAAAAA?rs=1&pid=ImgDetMain" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            The Increbidle
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://th.bing.com/th/id/OIP.dZ1mPP-wcoHbwg8v7DxhAQHaLG?rs=1&pid=ImgDetMain" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Aquaman
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="picture_y_div">
+                    <div class="img_cnt">
+                        <img src="https://www.themoviedb.org/t/p/original/aGyeGL033oG4eVaf0CiXNqdUTbH.jpg" alt="">
+                    </div>
+                    <div class="pic_name">
+                        <p>
+                            Rise of the zombies
+                        </p>
+                    </div>
+                </a>
+
+
+
+
+
+                <div class="search_bar">
+            <input type="text" placeholder="Search for movies...">
+            <button class="search_button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <div class="live_link">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse non, consequuntur accusantium illo odit
+                impedit et voluptatem minima ad commodi illum cumque vero error perspiciatis laudantium, facere,
+                reprehenderit natus voluptas.
+            </div>
+        </div>
