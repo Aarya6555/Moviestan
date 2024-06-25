@@ -3,19 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Embed Example</title>
+    <title>Responsive Movie Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            width: 100%;
+        }
+
+        .grid-item {
+            background-color: #4caf50;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 198 / 460;
+            position: relative;
+        }
+
+        .grid-item > * {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .grid-item p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>My Video</h1>
-    <video width="640" height="480" controls>
-        <!-- <source src="https://www.dropbox.com/scl/fi/niugs5nbzrq2n0x4455lw/fautured-cartoon-1.mp4?rlkey=6uwm4l5md3grix1eg9zno5fvv&st=z0puyaq4&raw=1" type="video/mp4"> -->
-        <source src="https://www.dropbox.com/scl/fi/m2w1mjtu9or5916xp9nq0/featured-hollywood-2.mp4?rlkey=iz6henfu48dbsee30tneifjl6&st=ohkqmqlv&st=z0puyaq4&raw=1" type="video/mp4"></video>
-        <video width="640" height="480" controls>
-            <source src="https://www.dropbox.com/scl/fi/fjvyhbtcd0c98sg1dujsk/featured-anime.mp4?rlkey=e51t4l8d33vf5mwp92w3zrs9z&st=glw2sucf&raw=1" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          
-        Your browser does not support the video tag.
-    </video>
+    <div class="grid-container">
+        <!-- Add movie divs here -->
+        <div class="grid-item">
+            <img src="https://via.placeholder.com/198x460" alt="Movie 1">
+            <p>Movie 1</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://via.placeholder.com/198x460" alt="Movie 2">
+            <p>Movie 2</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://via.placeholder.com/198x460" alt="Movie 3">
+            <p>Movie 3</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://via.placeholder.com/198x460" alt="Movie 1">
+            <p>Movie 1</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://via.placeholder.com/198x460" alt="Movie 2">
+            <p>Movie 2</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://via.placeholder.com/198x460" alt="Movie 3">
+            <p>Movie 3</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://via.placeholder.com/198x460" alt="Movie 1">
+            <p>Movie 1</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://via.placeholder.com/198x460" alt="Movie 2">
+            <p>Movie 2</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://via.placeholder.com/198x460" alt="Movie 3">
+            <p>Movie 3</p>
+        </div>
+        <!-- Add more movie divs as needed -->
+    </div>
 </body>
 </html>
