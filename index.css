@@ -12,7 +12,8 @@
     --fturd-info-fnt-size--:14px;
     --fturd-btn-fnt-size--:14px;
     --fturd-hdng-fnt-size--:48px;
-    --fturd-btn-pading-mdq-300--:10px
+    --fturd-btn-pading--:10px 20px;
+    --fturd-contr-size--:600px;
 }
 div{
     font-size: ;
@@ -345,14 +346,14 @@ body {
 }
 
 .featured_sliders .slide_container .slide .featured_content {
-    max-width: 600px;
+    max-width:var(--fturd-contr-size--);
     z-index: 1;
     padding: 0px 20px;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.556);
 }
 
 .featured_sliders .slide_container .slide .featured_content h1 {
-    font-size: 48px;
+    font-size: var(--fturd-hdng-fnt-size--);
 }
 
 .featured_sliders .slide_container .slide .featured_content .info {
@@ -373,7 +374,7 @@ body {
 }
 
 .featured_sliders .slide_container .slide .featured_content button {
-    padding: 10px 20px;
+    padding: var(--fturd-btn-pading--);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -1156,20 +1157,25 @@ body {
     }
 }
 @media (max-width: 500px) {
+    :root{
+        --fturd-info-fnt-size--:4vw;
+        --fturd-hdng-fnt-size--:7vw;
+        --fturd-dscp-fnt-size--:4vw;
+
+    }
     .header {
         height: 55px;
-        padding: auto;
+        padding: 5px;
     }
 
     .header .navigation_bar {
         top: 55px;
     }
-    .featured_sliders .slide_container .slide .featured_content h1{
-        font-size: 1.5rem;
-    }
+    
     .main_body .top_pic_main_container_sections .title_hd h2{
         font-size: 1.3rem;
     }
+  
     .main_body .top_pic_main_container_sections .pic_main_cnt{
         gap: 7px;
     }
@@ -1235,7 +1241,8 @@ body {
 @media (max-width: 400px) {
     :root{
         --fturd-dscp-fnt-size--:0.8rem;
-        --fturd-info-fnt-size--:0.5rem;
+
+        
         
     }
     .header .logo h1 {
@@ -1284,7 +1291,23 @@ body {
     }
 
 }
-
+@media (min-width: 1000px){
+    :root{
+        --fturd-contr-size--:50%;
+        --fturd-hdng-fnt-size--:5vw;
+        --fturd-dscp-fnt-size--:1vw;
+        --fturd-btn-pading--:20px 50px;
+        --fturd-btn-fnt-size--:1vw;
+        --fturd-info-fnt-size--:1vw;
+    }
+    .featured_sliders .slide_container .slide .featured_content{
+        margin-left: 20px;
+    }
+    .featured_sliders .slide_container .slide .featured_content .info {
+        gap: 4vw;
+        margin-top: -15px;
+    }
+}
 
 
 

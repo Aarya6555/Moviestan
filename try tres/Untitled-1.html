@@ -3,19 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Item</title>
     <style>
-        .example-element {
-            position: absolute; /* or relative, fixed */
-            top: calc(100vh - 88px);
-            /* Additional styles for visibility */
-            background-color: lightblue;
-            width: 100px;
-            height: 100px;
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px; /* Adjust as necessary */
+        }
+        .grid-item {
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* Maintain aspect ratio */
+            background-color: #4CAF50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+        .grid-item-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
-    <title>Calc Example</title>
 </head>
 <body>
-    <div class="example-element">Example</div>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="grid-item-content">Responsive Item</div>
+        </div>
+        <!-- Add more grid items if needed -->
+    </div>
 </body>
 </html>
