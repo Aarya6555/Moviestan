@@ -342,7 +342,17 @@ body {
     position: fixed;
     z-index: -1;
     top: 0;
+    position: relative;
     background-color: blueviolet;
+}
+.featured_sliders .slide_container .slide .featured_background::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 175px;
+    bottom: 0%;
+    background: rgb(23, 6, 77);
+    background: linear-gradient(0deg, rgb(15 15 45) 0%, rgba(253, 187, 45, 0) 100%);
 }
 
 .featured_sliders .slide_container .slide .featured_content {
@@ -412,25 +422,7 @@ body {
     z-index: 6;
 }
 
-.featured_slide_picture_btn_container::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 175px;
-    top: 0%;
-    background: rgb(23, 6, 77);
-    background: linear-gradient(0deg, rgb(15 15 45) 0%, rgba(253, 187, 45, 0) 100%);
-}
 
-.featured_slide_picture_btn_container::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 175px;
-    bottom: 0%;
-    z-index: -1;
-    background-color: var(--unvrsl-bg-color--);
-}
 
 .featured_slide_picture_btn_container .slide_button {
     width: 11.5%;
@@ -1034,12 +1026,7 @@ body {
         gap: 7px;
         height: 20px;
         background-color:  #060631;
-    }
-    .featured_slide_picture_btn_container::after{
-        display: none;
-    }
-    .featured_slide_picture_btn_container::before{
-        top: -175px;
+        margin-top: 0px;
     }
     .featured_slide_picture_btn_container .slide_button{
         overflow: hidden;
@@ -1111,10 +1098,7 @@ body {
     .main_body .all_pic_main_container .pic_main_cnt{
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
-    .featured_slide_picture_btn_container::before{
-        display: none;
-    }
-}
+    
 @media (max-width: 1000px){
     .featured_sliders{
         top:100px;
