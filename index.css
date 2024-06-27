@@ -562,19 +562,15 @@ body {
 
 .main_body .top_pic_main_container_sections .pic_main_cnt {
     display: grid;
-    height: auto;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    
     gap: 15px;
-
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     width: 100%;
+    box-sizing: border-box;
+    grid-template-columns: repeat(7, minmax(125px, 1fr));
     /* Adjust width to account for the gaps on both sides */
 }
 
 .main_body .top_pic_main_container_sections .pic_main_cnt .picture_y_div {
-
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -583,7 +579,6 @@ body {
     border-radius: 5px;
     transition: 0.1ms;
     aspect-ratio: 259 / 460;
-    position: relative;
     text-decoration: none;
 
 }
@@ -622,7 +617,7 @@ body {
 .main_body .top_pic_main_container_sections .pic_main_cnt .picture_y_div .pic_name p {
     width: 100%;
     color: rgba(255, 255, 255, 0.813);
-    font-size: 16px;
+    font-size: 1vw;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -642,6 +637,7 @@ body {
     justify-content: space-between;
     gap: 10px;
     flex-wrap: wrap;
+    
 }
 
 .main_body .all_pic_main_container .title_hd {
@@ -683,7 +679,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     gap: 15px;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(5, minmax(125px, 1fr));
 }
 
 .main_body .all_pic_main_container .pic_main_cnt .picture_x_div {
@@ -736,7 +732,7 @@ body {
 .main_body .all_pic_main_container .pic_main_cnt .picture_x_div .pic_name p {
     width: 100%;
     color: rgba(255, 255, 255, 0.813);
-    font-size: 16px;
+    font-size: 1vw;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1059,6 +1055,7 @@ body {
         height: 20px;
         margin-top: 0px;
         background-color: transparent;
+
     }
 
     .featured_slide_picture_btn_container .slide_button {
@@ -1089,6 +1086,9 @@ body {
         background-color: yellow;
         -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
         margin-top: 0px;
+    }
+    .main_body .top_pic_main_container_sections .pic_main_cnt{
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
     }
 
 }
@@ -1367,6 +1367,17 @@ body {
 
 
 
+@media (min-width: 3000px){
+    .featured_slide_picture_btn_container{
+        height: 12vw;
+    }
+    .featured_slide_picture_btn_container .slide_button{
+        width: 15vw;
+    }
+    .featured_slide_picture_btn_container .slide_button img{
+        object-position: top;
+    }
+}
 
 
 
