@@ -15,7 +15,9 @@
     --fturd-btn-pading--: 1vw 2vw;
     --fturd-contr-size--: 600px;
     --pic-cntr-title-hd-fnt-size--: 1.5vw;
-
+    --hdr-menu-fnt-size--:1vw;
+    --hdr-toggel-size--:2.1vw;
+    --hdr-toggel-fnt-size--:0.8vw;
 }
 
 :root {
@@ -62,7 +64,7 @@ body {
 
 .header {
     width: 100%;
-    height: 88px;
+    height: 4.5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -91,13 +93,13 @@ body {
 }
 
 .header .logo h1 {
-    font-size: 3rem;
+    font-size: 3vw;
     font-weight: 600;
     color: #ffcc00;
 }
 
 .header .logo h1 .lg_sml {
-    font-size: 2.2rem;
+    font-size: 2vw;
     color: white;
 }
 
@@ -107,6 +109,7 @@ body {
     gap: 20px;
     margin: 0;
     padding: 0;
+    font-size: var(--hdr-menu-fnt-size--);
 }
 
 .header .navigation_bar .menus .sidbar_btn {
@@ -126,6 +129,7 @@ body {
     color: white;
     border-radius: 6px;
     background-color: transparent;
+    font-size: var(--hdr-menu-fnt-size--);
 }
 
 .header .navigation_bar .menus .select option {
@@ -133,6 +137,7 @@ body {
     color: white;
     background-color: #1a1a3d;
     transition: 0.2s;
+    font-size: var(--hdr-menu-fnt-size--);
 }
 
 .header .navigation_bar .menus .menu a {
@@ -159,8 +164,8 @@ body {
 }
 
 .header .togglemenu .search_btn {
-    width: 40px;
-    height: 40px;
+    width: var(--hdr-toggel-size--);
+    height: var(--hdr-toggel-size--);
     border-radius: 100%;
     display: flex;
     align-items: center;
@@ -170,6 +175,7 @@ body {
     border: 1px solid yellow;
     color: yellow;
     transition: 0.2ms;
+    font-size: var(--hdr-toggel-fnt-size--);
 }
 
 .header .togglemenu .search_btn:hover {
@@ -178,8 +184,8 @@ body {
 }
 
 .header .togglemenu .user_profile {
-    width: 40px;
-    height: 40px;
+    width:var(--hdr-toggel-size--);
+    height: var(--hdr-toggel-size--);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,6 +213,7 @@ body {
     position: absolute;
     border-radius: 100%;
     transition: 0.2ms;
+    font-size: var(--hdr-toggel-fnt-size--);
 }
 
 .header .togglemenu .user_profile .user_dp .icon:hover {
@@ -624,7 +631,7 @@ body {
 
 }
 
-.main_body .top_pic_main_container_sections .pic_main_cnt .picture_y_div:hover .pic_name span {
+.main_body .top_pic_main_container_sections .pic_main_cnt .picture_y_div:hover .pic_name p {
     color: white;
 }
 
@@ -739,7 +746,7 @@ body {
 
 }
 
-.main_body .all_pic_main_container .pic_main_cnt .picture_x_div:hover .pic_name span {
+.main_body .all_pic_main_container .pic_main_cnt .picture_x_div:hover .pic_name p {
     color: white;
 }
 
@@ -1029,6 +1036,15 @@ body {
 }
 
 @media (max-width: 1900px) {
+    :root{
+        --hdr-menu-fnt-size--:14px;
+        --hdr-toggel-size--:40px;
+        --hdr-toggel-fnt-size--:auto;
+    }
+    .header{
+        height: 88px;
+    }
+    
 
     .header .navigation_bar {
         width: 100%;
@@ -1041,6 +1057,13 @@ body {
         justify-content: space-between;
         padding: 15px;
         border-top: 1px solid #ffffff1a;
+    }
+    .header .logo h1 {
+        font-size: 3rem;
+    }
+    
+    .header .logo h1 .lg_sml {
+        font-size: 2.2rem;
     }
 }
 
